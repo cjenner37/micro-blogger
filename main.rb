@@ -42,10 +42,10 @@ post '/login' do
 		# log in the user
 		session[:user_id] = @user.id
 		flash[:notice] = "You've been signed in!"
-		redirect '/profile'
+		redirect '/feed'
 	else
 		flash[:alert] = "There was a problem. Please try again!"
-		redirect '/login'
+		redirect '/'
 	end
 end
 
@@ -62,4 +62,8 @@ get '/profile' do
 	@comment_count = @user.comments.length
 
 	erb :profile
+end
+
+get '/feed' do
+	erb :feed
 end
