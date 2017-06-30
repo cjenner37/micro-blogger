@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Boat Enthusiasts</title>
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<!-- Our CSS -->
+	<link rel="stylesheet" href="css/index.css">
+	<!-- Our JS -->
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<% if flash[:notice] %>
+		<div class="flash notice">
+			<%= flash[:notice] %>
+		</div>
+	<% end %>
+	<% if flash[:alert] %>
+		<div class="flash alert">
+			<%= flash[:alert] %>
+		</div>
+	<% end %>
+	<%= yield %>
+</body>
+</html>
