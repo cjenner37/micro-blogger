@@ -1,0 +1,18 @@
+<div id="body-container">
+    <h1 class="display-4">Your Profile</h1>
+    <div class="row">
+        <div class="left col-9">
+            <% @user.posts.each do |i| %>
+                <div>
+                    <h3><%= i.title %></h3>
+                    <p><%= i.content %></p>
+                </div>
+            <% end %>
+        </div>
+      <div class="right col-3">
+        <p>Posts: <%= @post_count %></p>
+        <p>Comments: <%= @comment_count %></p>
+        <p>Friends: none</p>
+      </div>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+
 .jumbotron {
 	margin-bottom: 0px;
     background-image: url(/images/pic1.jpg);
@@ -38,4 +39,29 @@
 	float: left;
 	border: solid black;
 	margin: 75px;
+    color: white;
+} 
+
+#body-container{
+    margin: auto;
+    max-width: 1000px;
+    padding-top: 40px;
+}
+
+.left {
+    border-right: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+/*    max-width: 800px;*/
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.display-4 {
+    margin-bottom: 50px;
 }
