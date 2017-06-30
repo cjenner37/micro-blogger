@@ -1,19 +1,17 @@
 <div id="body-container">
+    <h1 class="display-4">Your Profile</h1>
     <div class="row">
-      <div class="left col-9">
-        <div>
-            <h1>My heading</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex praesentium distinctio placeat reprehenderit nam, ipsam reiciendis ipsa deleniti quibusdam! Eligendi enim impedit vero rem adipisci totam ut explicabo vitae possimus.
-            </p>
-            <p>
-                Lorem ipsum dolor sisdf asdgasdfasdf adsfasdf adsn;asldkgj a;sldkgj a;sdlkfn a;lsdkn a;sdlt amet, consectetur adipisicing elit. A nesciunt velit repellat iure, quo. Aliquid id at, quisquam pariatur autem dignissimos tenetur culpa quia. Excepturi delectus, ipsam! Natus, suscipit in.
-            </p>
+        <div class="left col-9">
+            <% @user.posts.each do |i| %>
+                <div>
+                    <h3><%= i.title %></h3>
+                    <p><%= i.content %></p>
+                </div>
+            <% end %>
         </div>
-      </div>
       <div class="right col-3">
-        <p>Posts: 44</p>
-        <p>Comments: 59</p>
+        <p>Posts: <%= @post_count %></p>
+        <p>Comments: <%= @comment_count %></p>
         <p>Friends: none</p>
       </div>
     </div>
