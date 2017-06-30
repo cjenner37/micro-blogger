@@ -28,7 +28,7 @@ get '/new_user' do
 end
 
 post '/new_user' do
-	User.create(params[:user])
+	puts User.create(params[:user])
 	redirect '/profile'
 end
 
@@ -42,14 +42,14 @@ post '/login' do
 		# log in the user
 		session[:user_id] = @user.id
 		flash[:notice] = "You've been signed in!"
-		redirect '/feed'
+		redirect '/profile'
 	else
 		flash[:alert] = "There was a problem. Please try again!"
 		redirect '/'
 	end
 end
 
-post '/logout' do
+get '/logout' do
 	session[:user_id] = nil
 	redirect '/'
 end
