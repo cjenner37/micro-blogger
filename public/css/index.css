@@ -1,10 +1,44 @@
 
 .jumbotron {
 	margin-bottom: 0px;
-    background-image: url(images/pic1.jpg);
+    background-image: url(/images/pic1.jpg);
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
+    color: orange;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#login_container {
+	text-align: center;
+	height: 350px;
+}
+
+#login_centerwrapper {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+#new_user_creation {
+	display: inline-block;
+	float: left;
+	height: 305px;
+	width: 350px;
+	background-color: orange;
+	border: solid black;
+	margin: 75px;
+}
+
+#returning_user_signin {
+	display: inline-block;
+	float: left;
+	height: 305px;
+	width: 350px;
+	background-color: orange;
+	float: left;
+	border: solid black;
+	margin: 75px;
     color: white;
 } 
 

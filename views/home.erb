@@ -3,7 +3,34 @@
   <p class="lead">This blog is for you an fellow ship Captains and lovers accross the world!</p>
   <hr class="my-4">
   <p>Please post about your best practices, favorite places around the world, funny stories and anything else ship related you can think of.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
+</div>
+
+<div id="login_container">
+	<div id="login_centerwrapper">
+		<div id="new_user_creation">
+			<h3>New Boaters</h3>
+			<form action="/new_user" method="POST">
+				<input type="text" name="first_name" placeholder="First Name"><br>
+				<br>
+				<input type="text" name="last_name" placeholder="Last Name"><br>
+				<br>
+				<input type="email" name="email" placeholder="Email"><br>
+				<br>
+				<input type="password" name="password" placeholder="Password"><br>
+				<br>
+				<input type="submit" name="Submit">
+			</form>
+		</div>
+
+		<div id="returning_user_signin">
+			<h3>Returning Boaters</h3>
+			<form action="/login" method="POST">
+				<input type="email" name="email" placeholder="Email"><br>
+				<br>
+				<input type="password" name="password" placeholder="Password"><br>
+				<br>
+				<input type="submit" name="Submit">
+			</form>
+		</div>
+	</div>
 </div>
