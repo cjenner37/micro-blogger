@@ -18,13 +18,18 @@ get '/' do
 	erb :home
 end
 
+post '/' do
+	User.create(params[:user])
+	redirect '/profile'
+end
+
 get '/new_user' do
 	erb :new_user
 end
 
 post '/new_user' do
 	User.create(params[:user])
-	redirect '/'
+	redirect '/profile'
 end
 
 get '/login' do
@@ -37,7 +42,7 @@ post '/login' do
 		# log in the user
 		session[:user_id] = @user.id
 		flash[:notice] = "You've been signed in!"
-		redirect '/'
+		redirect '/profile'
 	else
 		flash[:alert] = "There was a problem. Please try again!"
 		redirect '/login'
