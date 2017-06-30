@@ -1,0 +1,19 @@
+#body-container{
+    margin: auto;
+    max-width: 1000px;
+    
+}
+
+.left {
+    border-right: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+/*    max-width: 800px;*/
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}

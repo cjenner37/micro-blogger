@@ -48,3 +48,10 @@ post '/logout' do
 	session[:user_id] = nil
 	redirect '/'
 end
+
+get '/profile' do
+	@user
+	@user_posts = @user.posts
+	@post_count = @user.posts.length
+	@comment_count = @user.comments.length
+end
