@@ -5,7 +5,7 @@ require './models'
 require 'sinatra/flash'
 
 enable :sessions
-set :database, 'sqlite3:blog.sqlite3'
+set :database, 'sqlite3:boatblog.sqlite3'
 
 def current_user
 	if session[:user_id]
