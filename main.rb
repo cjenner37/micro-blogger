@@ -50,8 +50,8 @@ post '/logout' do
 end
 
 get '/profile' do
-	# @user = current_user
-	@user = User.first # this is temporary, we should be using the line above
+	@user = current_user
+	# @user = User.first # this is temporary, we should be using the line above
 	@user_posts = @user.posts
 	@post_count = @user.posts.length
 	@comment_count = @user.comments.length
