@@ -29,6 +29,7 @@ end
 
 post '/new_user' do
 	User.create(params[:user])
+	session[:user_id] = @user.id
 	redirect '/profile'
 end
 
