@@ -105,3 +105,9 @@ post '/edit_profile' do
 	redirect '/profile'
 
 end
+
+get '/post/:id' do
+	@user = current_user
+	@post = Post.find(params[:id])
+	erb :post
+end

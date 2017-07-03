@@ -87,10 +87,24 @@ body {
     margin-top: 25px;
     height: 500px;
     width: 60vw;
+    overflow: scroll;
     border: solid black;
 }
 
 #posts_wrapper {
+    margin-top: 15px;
     display: flex;
     justify-content: center;
+}
+
+#post_username {
+    margin: 100px;
+}
+
+#post_title {
+    margin: 100px;
+}
+
+#post_content {
+    margin: 100px;
 }
