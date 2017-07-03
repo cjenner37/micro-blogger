@@ -1,3 +1,40 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/edit_profile" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name: Jimbo Bob</label>
+                <input type="text" class="form-control" id="update_first_name" placeholder="Change First Name...">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="update_last_name" placeholder="Change Last Name...">
+            </div>
+            <div class="form-group">
+                <label for="email">Your Current Email: email@email.email</label>
+                <input type="text" class="form-control" id="update_email" placeholder="New Email...">
+            </div>
+            <div class="form-group">
+                <label for="email">Update Your Password:</label>
+                <input type="text" class="form-control" id="update_password" placeholder="New Password...">
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="body-container">
     <h1 class="display-4">Your Profile</h1>
     <div class="row">
@@ -13,6 +50,7 @@
         <p>Posts: <%= @post_count %></p>
         <p>Comments: <%= @comment_count %></p>
         <p>Friends: none</p>
+        <button type="button" id="edit-profile" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Edit my Profile</button>
       </div>
     </div>
 </div>
