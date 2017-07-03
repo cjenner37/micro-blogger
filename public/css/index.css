@@ -81,3 +81,10 @@ body {
 .navbar-text {
     margin-right: 30px;
 }
+
+.list-group {
+    opacity: .85;
+    float: right;
+    border-radius: 5px;
+    min-width: 215px;
+}
