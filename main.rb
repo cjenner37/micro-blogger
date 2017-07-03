@@ -109,6 +109,8 @@ end
 get '/post/:id' do
 	@user = current_user
 	@post = Post.find(params[:id])
+	@poster_id = @post.user_id
+	@poster = User.where(id: @poster_id)[0]
 	erb :post
 end
 
