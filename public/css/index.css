@@ -82,6 +82,13 @@ body {
     margin-right: 30px;
 }
 
+.list-group {
+    opacity: .85;
+    float: right;
+    border-radius: 5px;
+    min-width: 215px;
+}
+
 #user_posts {
     margin: 0px 20vw;
     margin-top: 25px;
