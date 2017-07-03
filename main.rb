@@ -111,3 +111,10 @@ get '/post/:id' do
 	@post = Post.find(params[:id])
 	erb :post
 end
+
+post '/search_users' do
+	@search_term = params[:name]
+	@results = User.where('first_name LIKE ?', '%' + @search_term + '%')
+
+	erb :search_results, layout: false
+end
