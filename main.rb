@@ -14,7 +14,7 @@ def current_user
 end
 
 get '/' do
-	@current_user = current_user
+	@user = current_user
 	erb :home
 end
 
@@ -57,7 +57,7 @@ end
 
 get '/profile' do
 	@user = current_user
-	# @user = User.first # this is temporary, we should be using the line above
+
 	@user_posts = @user.posts
 	@post_count = @user.posts.length
 	@comment_count = @user.comments.length
@@ -75,4 +75,33 @@ post '/feed' do
 	@user = current_user
 	@user.posts.create(params[:post])
 	redirect '/feed'
+end
+
+
+post '/edit_profile' do
+	@user = current_user
+	@new_first_name = params[:update_first_name]
+	@new_last_name = params[:update_last_name]
+	@new_email = params[:update_email]
+	@new_password = params[:update_password]
+
+	if !@new_first_name.nil? or @new_first_name != ""
+		@user.first_name = @new_first_name
+	end
+
+	if !@new_last_name.nil? or @new_last_name != ""
+		@user.last_name = @new_last_name
+	end
+
+	if !@new_email.nil? or @new_email != ""
+		@user.email = @new_email
+	end
+
+	if !@new_password.nil? or @new_password != ""
+		@user.password = @new_password
+	end
+
+	@user.save
+	redirect '/profile'
+
 end

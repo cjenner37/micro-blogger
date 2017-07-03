@@ -9,27 +9,27 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="/edit_profile" method="POST">
+        <form id="edit-profile-form" action="/edit_profile" method="POST">
             <div class="form-group">
-                <label for="name">Your Name: Jimbo Bob</label>
-                <input type="text" class="form-control" id="update_first_name" placeholder="Change First Name...">
+                <label for="name">Your Name: <%= @user.full_name %></label>
+                <input type="text" name="update_first_name"class="form-control" id="update_first_name" placeholder="Change First Name...">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="update_last_name" placeholder="Change Last Name...">
+                <input type="text" name="update_last_name"class="form-control" id="update_last_name" placeholder="Change Last Name...">
             </div>
             <div class="form-group">
-                <label for="email">Your Current Email: email@email.email</label>
-                <input type="text" class="form-control" id="update_email" placeholder="New Email...">
+                <label for="email">Your Current Email: <%= @user.email %></label>
+                <input type="text" name="update_email"class="form-control" id="update_email" placeholder="New Email...">
             </div>
             <div class="form-group">
                 <label for="email">Update Your Password:</label>
-                <input type="text" class="form-control" id="update_password" placeholder="New Password...">
+                <input type="password" name="update_password" class="form-control" id="update_password" placeholder="New Password...">
             </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" id="submit-edit-profile" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
