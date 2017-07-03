@@ -109,6 +109,8 @@ end
 get '/post/:id' do
 	@user = current_user
 	@post = Post.find(params[:id])
+	@poster_id = @post.user_id
+	@poster = User.where(id: @poster_id)[0]
 	erb :post
 end
 
@@ -117,4 +119,11 @@ post '/search_users' do
 	@results = User.where('first_name LIKE ?', '%' + @search_term + '%')
 
 	erb :search_results, layout: false
+end
+
+get '/user/:id' do
+	@user = current_user
+	@inspect_user = User.find(params[:id])
+
+	erb :user
 end
