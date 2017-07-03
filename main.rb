@@ -106,6 +106,11 @@ post '/edit_profile' do
 
 end
 
+get '/post/:id' do
+	@user = current_user
+	@post = Post.find(params[:id])
+	erb :post
+end
 
 post '/search_users' do
 	@search_term = params[:name]
