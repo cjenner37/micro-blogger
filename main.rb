@@ -43,21 +43,21 @@ post '/login' do
 		# log in the user
 		session[:user_id] = @user.id
 		flash[:notice] = "You've been signed in!"
-		redirect '/feed'
+		redirect '/profile'
 	else
 		flash[:alert] = "There was a problem. Please try again!"
 		redirect '/'
 	end
 end
 
-post '/logout' do
+get '/logout' do
 	session[:user_id] = nil
 	redirect '/'
 end
 
 get '/profile' do
-	# @user = current_user
-	@user = User.first # this is temporary, we should be using the line above
+	@user = current_user
+	# @user = User.first # this is temporary, we should be using the line above
 	@user_posts = @user.posts
 	@post_count = @user.posts.length
 	@comment_count = @user.comments.length
