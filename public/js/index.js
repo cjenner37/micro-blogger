@@ -7,6 +7,15 @@ $(document).ready(function () {
     	$('#edit-profile-form').submit();
     });
 
+    $('#add-comment').click(function () { 
+    	console.log("clicked");
+        $('#commentModal').modal('show');
+    });
+
+    $('#submit-comment').click(function () {
+    	$('#write-comment-form').submit();
+    });
+
     $('#user-search').keyup(function () {
     	let searchTerm = $(this).val();
     	if (searchTerm != "") {

@@ -127,3 +127,9 @@ get '/user/:id' do
 
 	erb :user
 end
+
+post '/new_comment' do
+	@comment = current_user.comments.create(params[:comment])
+
+	redirect "/post/#{params[:comment][:post_id]}"
+end
