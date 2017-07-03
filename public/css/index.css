@@ -88,3 +88,16 @@ body {
     border-radius: 5px;
     min-width: 215px;
 }
+
+#user_posts {
+    margin: 0px 20vw;
+    margin-top: 25px;
+    height: 500px;
+    width: 60vw;
+    border: solid black;
+}
+
+#posts_wrapper {
+    display: flex;
+    justify-content: center;
+}
