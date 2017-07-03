@@ -118,3 +118,10 @@ post '/search_users' do
 
 	erb :search_results, layout: false
 end
+
+get '/user/:id' do
+	@user = current_user
+	@inspect_user = User.find(params[:id])
+
+	erb :user
+end

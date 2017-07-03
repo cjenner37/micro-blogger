@@ -15,6 +15,7 @@ $(document).ready(function () {
     		$('#search-results').empty();
     	}
     });
+
 });
 
 function searchFor(searchTerm) {
