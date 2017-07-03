@@ -54,7 +54,7 @@ body {
     color: white;
 } 
 
-#body-container{
+.body-container{
     margin: auto;
     max-width: 1000px;
     padding-top: 40px;
@@ -122,4 +122,12 @@ body {
 
 #feed_header {
     margin-top: 35px;
+
+#username {
+	margin: 0 0 55px 0;
+	border-bottom: 1px solid lightgrey;
+}
+
+.title {
+	margin: 40px 0 20px 0;
 }
