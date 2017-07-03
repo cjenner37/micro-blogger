@@ -66,5 +66,13 @@ get '/profile' do
 end
 
 get '/feed' do
+	@user = current_user
+	@posts = @user.posts.last(10).reverse
 	erb :feed
+end
+
+post '/feed' do
+	@user = current_user
+	@user.posts.create(params[:post])
+	redirect '/feed'
 end
