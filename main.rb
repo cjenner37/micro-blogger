@@ -58,8 +58,8 @@ end
 get '/profile' do
 	@user = current_user
 
-	@user_posts = @user.posts
-	@post_count = @user.posts.length
+	@user_posts = @user.posts.reverse
+	@post_count = @user_posts.length
 	@comment_count = @user.comments.length
 
 	erb :profile

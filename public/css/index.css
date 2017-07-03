@@ -106,15 +106,22 @@ body {
 
 #post_username {
     margin: 100px;
+    color: white;
+    
 }
 
 #post_title {
     margin: 100px;
+    color: white;
+    
 }
 
 #post_content {
     margin: 100px;
 }
+
+#feed_header {
+    margin-top: 35px;
 
 #username {
 	margin: 0 0 55px 0;
