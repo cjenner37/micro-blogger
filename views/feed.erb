@@ -1,19 +1,20 @@
-<h3 id="feed_header" align="center">Your Latests Posts</h3>
-<div id="user_posts">
-	<% @posts.each do |post| %>
-		<h3> <%= post.title %> </h3>
-		<a href="/post/<%= post.id %>">Click for full Post</a>
-	<% end %>
-</div>
+<div class="body-container">
+	<h4 class="display-4" id="feed_header">Your Latest Posts</h4>
+	<div id="user_posts">
+		<% @posts.each do |post| %>
+			<h3> <%= post.title %> </h3>
+			<a href="/post/<%= post.id %>">Click for full Post</a>
+		<% end %>
+	</div>
 
-<div id="posts_wrapper">
-	<form action="/feed" method="POST">
-		<label>New Post: </label><br>
-		<input type="text" name="post[title]" placeholder="Title"><br>
-		<br>
-		<textarea rows="10" cols="65" name="post[content]"></textarea><br>
-		<input type="submit" name="submit">
-	</form>
+	<div id="posts_wrapper">
+		<form action="/feed" method="POST">
+			<label>New Post: </label><br>
+			<input type="text" name="post[title]" placeholder="Title"><br>
+			<br>
+			<textarea rows="10" cols="65" name="post[content]"></textarea><br>
+			<input type="submit" name="submit">
+		</form>
+	</div>
 </div>
-
 
