@@ -28,18 +28,20 @@
 
 <div class="body-container">
 	<div id="post_username">
-		<h5> This post was written by <%= @poster.first_name %> </h5>
+		<h5 class="display-4"> This post was written by <%= @poster.full_name %> </h5>
 	</div>
 
 	<div id="post_title">
-		<h3> <%= @post.title %> </h3>
+		<h3 class="display-5"> <%= @post.title %> </h3>
 	</div>
 
 	<div id="post_content">
 		<p> <%= @post.content %> </p>
 	</div>
 
-	<button type="button" id="add-comment" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Add Comment</button>
+	<% if @user %>
+		<button type="button" id="add-comment" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Add Comment</button>
+	<% end %>
 
 	<h5>Comments:</h5>
 	<div class="post_comments">

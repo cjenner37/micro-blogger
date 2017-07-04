@@ -9,11 +9,16 @@
 
 	<div id="posts_wrapper">
 		<form action="/feed" method="POST">
-			<label>New Post: </label><br>
-			<input type="text" name="post[title]" placeholder="Title"><br>
-			<br>
-			<textarea rows="10" cols="65" name="post[content]"></textarea><br>
-			<input type="submit" name="submit">
+			<div class="form-group">
+				<label>New Post: </label><br>
+				<input type="text" name="post[title]" placeholder="Title">
+			</div>
+			<div class="form-group">
+				<textarea rows="10" cols="65" name="post[content]"></textarea>
+			</div>
+			<div class="form-group">	
+				<input type="submit" name="submit">
+			</div>
 		</form>
 	</div>
 </div>

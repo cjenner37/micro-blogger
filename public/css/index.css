@@ -13,12 +13,13 @@ body {
 
 .jumbotron {
 	margin-bottom: 0px;
-    background-image: url(/images/pic1.jpg);
+    background-image: url(/images/sailing-yacht.jpg);
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
     color: orange;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 1px 1px 1px saddlebrown;
+    height: 520px;
 }
 
 #login_container {
@@ -40,6 +41,8 @@ body {
 	background-color: orange;
 	border: solid black;
 	margin: 75px;
+	padding: 20px;
+	border-radius: 10px;
 }
 
 #returning_user_signin {
@@ -51,7 +54,9 @@ body {
 	float: left;
 	border: solid black;
 	margin: 75px;
-    color: white;
+   color: white;
+   padding: 20px;
+	border-radius: 10px;
 } 
 
 .body-container{
@@ -112,7 +117,7 @@ body {
 }
 
 #post_username {
-    margin: 100px;
+    margin: 50px 0 25px 0;
     color: white;
     
 }
@@ -120,7 +125,6 @@ body {
 #post_title {
     margin: 100px;
     color: white;
-    
 }
 
 #post_content {
@@ -133,7 +137,6 @@ body {
 
 #username {
 	margin: 0 0 55px 0;
-	border-bottom: 1px solid lightgrey;
 }
 
 .title {
