@@ -85,19 +85,19 @@ post '/edit_profile' do
 	@new_email = params[:update_email]
 	@new_password = params[:update_password]
 
-	if !@new_first_name.nil? or @new_first_name != ""
+	if !@new_first_name.nil? and @new_first_name != ""
 		@user.first_name = @new_first_name
 	end
 
-	if !@new_last_name.nil? or @new_last_name != ""
+	if !@new_last_name.nil? and @new_last_name != ""
 		@user.last_name = @new_last_name
 	end
 
-	if !@new_email.nil? or @new_email != ""
+	if !@new_email.nil? and @new_email != ""
 		@user.email = @new_email
 	end
 
-	if !@new_password.nil? or @new_password != ""
+	if !@new_password.nil? and @new_password != ""
 		@user.password = @new_password
 	end
 
